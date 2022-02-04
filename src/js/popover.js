@@ -18,6 +18,7 @@ export default function popoverClick() {
   const arrow = document.querySelector('.popover__arrow');
   const marginArrow = Math.abs(window.getComputedStyle(arrow, ':before').marginLeft.replace('px', ''));
   popover.style.bottom = `${button.offsetHeight + marginArrow}px`;
+  popover.style.left = 0;
 
   button.addEventListener('click', (e) => {
     e.preventDefault();

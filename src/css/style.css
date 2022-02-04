@@ -26,7 +26,7 @@
 }
 
 .popover {
-  display: block;
+  display: none;
   font-weight: normal;
   position: absolute;
 }
