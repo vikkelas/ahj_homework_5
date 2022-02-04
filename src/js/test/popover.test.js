@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import popoverClick from '../popover';
 
 test('should toggle popover', () => {
@@ -10,5 +11,5 @@ test('should toggle popover', () => {
   expect(popover.classList.contains('active')).toBe(true);
 
   btn.click();
-  expect(popover.classList.contains('show')).toBe(false);
+  expect(popover.classList.contains('active')).toBe(false);
 });

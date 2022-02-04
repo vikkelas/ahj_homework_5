@@ -16,7 +16,6 @@ export default function popoverClick() {
   <div class="popover__arrow"></div>
   `;
   const marginCont = Number(window.getComputedStyle(container).marginTop.replace('px', ''));
-  console.log(marginCont);
   popover.style.bottom = `${marginCont + 10}px`;
 
   button.addEventListener('click', (e) => {
