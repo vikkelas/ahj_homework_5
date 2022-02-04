@@ -8,15 +8,16 @@ export default function popoverClick() {
   button.textContent = 'Click to toggle popover';
   button.classList.add('button_style');
   button.style.position = 'relative';
-  container.appendChild(popover);
+  button.appendChild(popover);
   popover.classList.add('popover');
   popover.innerHTML = `
   <div class="popover__title">Title popover</div>
   <div class="popover__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit</div>
   <div class="popover__arrow"></div>
   `;
-  const marginCont = Number(window.getComputedStyle(container).marginTop.replace('px', ''));
-  popover.style.bottom = `${marginCont + 10}px`;
+  const arrow = document.querySelector('.popover__arrow');
+  const marginArrow = Math.abs(window.getComputedStyle(arrow, ':before').marginLeft.replace('px', ''));
+  popover.style.bottom = `${button.offsetHeight + marginArrow}px`;
 
   button.addEventListener('click', (e) => {
     e.preventDefault();
